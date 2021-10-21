@@ -22,7 +22,7 @@
 
                         <div class="form-group">
                             <strong>Tienda:</strong>
-                            {{ $juego->tienda_id }}
+                            {{ $juego->tienda->nombre }}
                         </div>
                         <div class="form-group">
                             <strong>Nombre:</strong>

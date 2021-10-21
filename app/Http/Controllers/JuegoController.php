@@ -65,7 +65,9 @@ class JuegoController extends Controller
     {
         $juego = Juego::find($id);
 
-        return view('juego.show', compact('juego'));
+        // obteniendo lista de tiendas
+        $tiendas = Tienda::pluck('nombre','id');
+        return view('juego.show', compact('juego', 'tiendas'));
     }
 
     /**
