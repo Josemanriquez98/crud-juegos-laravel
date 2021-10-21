@@ -48,7 +48,7 @@ class TiendaController extends Controller
         $tienda = Tienda::create($request->all());
 
         return redirect()->route('tiendas.index')
-            ->with('success', 'Tienda created successfully.');
+            ->with('success', 'Tienda creada con exito.');
     }
 
     /**
@@ -91,7 +91,7 @@ class TiendaController extends Controller
         $tienda->update($request->all());
 
         return redirect()->route('tiendas.index')
-            ->with('success', 'Tienda updated successfully');
+            ->with('success', 'Tienda editada con exito');
     }
 
     /**
@@ -104,6 +104,6 @@ class TiendaController extends Controller
         $tienda = Tienda::find($id)->delete();
 
         return redirect()->route('tiendas.index')
-            ->with('success', 'Tienda deleted successfully');
+            ->with('success', 'Tienda eliminada con exito');
     }
 }

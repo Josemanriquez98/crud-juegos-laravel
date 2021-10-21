@@ -3,7 +3,7 @@
 
         <div class="form-group">
             {{ Form::label('tienda_id') }}
-            {{ Form::select('tienda_id', $tiendas , $juego->tienda_id, ['class' => 'form-control' . ($errors->has('tienda_id') ? ' is-invalid' : ''), 'placeholder' => 'Tienda Id']) }}
+            {{ Form::select('tienda_id', $tiendas , $juego->tienda_id, ['class' => 'form-control' . ($errors->has('tienda_id') ? ' is-invalid' : ''), 'placeholder' => 'Tienda']) }}
             {!! $errors->first('tienda_id', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
@@ -14,6 +14,6 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Guardar Juego</button>
     </div>
 </div>

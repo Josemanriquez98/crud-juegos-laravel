@@ -11,17 +11,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Juego</span>
+                            <span class="card-title">Juego</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('juegos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('juegos.index') }}"> Volver</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-                        
+
                         <div class="form-group">
-                            <strong>Tienda Id:</strong>
+                            <strong>Tienda:</strong>
                             {{ $juego->tienda_id }}
                         </div>
                         <div class="form-group">

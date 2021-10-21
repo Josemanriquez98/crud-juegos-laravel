@@ -52,7 +52,7 @@ class JuegoController extends Controller
         $juego = Juego::create($request->all());
 
         return redirect()->route('juegos.index')
-            ->with('success', 'Juego created successfully.');
+            ->with('success', 'Juego creado con exito.');
     }
 
     /**
@@ -98,7 +98,7 @@ class JuegoController extends Controller
         $juego->update($request->all());
 
         return redirect()->route('juegos.index')
-            ->with('success', 'Juego updated successfully');
+            ->with('success', 'Juego editado con exito');
     }
 
     /**
@@ -111,6 +111,6 @@ class JuegoController extends Controller
         $juego = Juego::find($id)->delete();
 
         return redirect()->route('juegos.index')
-            ->with('success', 'Juego deleted successfully');
+            ->with('success', 'Juego eliminado con exito');
     }
 }
