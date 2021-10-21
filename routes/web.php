@@ -13,9 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// al ingresar a / redirige a la vista de juegos (juego.index) y pide autentificacion
+Route::get('/', [\App\Http\Controllers\JuegoController::class, 'index'])->middleware('auth');
+
+// al ingresar a /home redirige a la vista de juegos (juego.index) y pide autentificacion
+Route::get('/home', [App\Http\Controllers\JuegoController::class, 'index'])->name('home')->middleware('auth');
 
 Auth::routes();
 
@@ -24,5 +30,3 @@ Route::resource('juegos', App\Http\Controllers\JuegoController::class)->middlewa
 
 // genera las rutas a partir del controlador de tienda
 Route::resource('tiendas', App\Http\Controllers\TiendaController::class)->middleware('auth');
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
